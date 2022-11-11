@@ -77,6 +77,12 @@
 
 另本项目已使用当前较为流利的CICD方式，jenkins+k8s进行持续构建、部署，涉及文件:Dockerfile,K8sJenkinsFile及deploy.yaml
 
+详情可参考：或者点击[链接](https://mp.weixin.qq.com/s?__biz=MzI0NzI3ODcxOA==&mid=2650174707&idx=1&sn=4faf5d058891993dc838f3df0ec678d3&chksm=f1b0a9e2c6c720f41762c5371dbb26987e49aac2acc180e9ff773f1b29af9579f213a38c5bee#rd)
+
+```
+https://mp.weixin.qq.com/s?__biz=MzI0NzI3ODcxOA==&mid=2650174707&idx=1&sn=4faf5d058891993dc838f3df0ec678d3&chksm=f1b0a9e2c6c720f41762c5371dbb26987e49aac2acc180e9ff773f1b29af9579f213a38c5bee#rd
+```
+
 Dockerfile:大概作用是依据基础的jdk镜像，添加上自己本身的jar包，打成镜像包
 
 K8sJenkinsFile:大概作用是把生成jar包、部署jar包流程自动化
@@ -89,5 +95,8 @@ k8s部署的项目访问网址:
 + 后台地址：http://tmall.howlaisi.com:31253/tmall/admin
 
 具体情况可联系以下同学(加他时请备注"贤趣CICD"):
-+ ##### 贤趣CICD同学微信
-<img src="https://gitee.com/haoxr/image/raw/master/default/jialin.jpg" alt="CICD同学" width="128px" height="128px"/>
+
+```
+ggttxlss
+```
+
