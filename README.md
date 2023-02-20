@@ -1,10 +1,11 @@
 # 迷你天猫商城
-+ **问题交流QQ群：763819871**
++ **问题交流QQ群(已满，请加微信群)：763819871**
 + **问题交流微信群：**
 + <img src="%E6%9C%89%E9%97%AE%E9%A2%98%E5%8A%A0%E5%BE%AE%E4%BF%A1%E7%BE%A4.jpg" alt="问题交流微信群" width="30%" height="30%"/>
-+ **前台演示地址（服务器1核2G内存，请温和测试 ^ ^）：<https://xianqu.fun/tmall/>**
-+ 2021/9/9：备案已完成，目前可以正常访问
-+ 2022/4/21：发布一个基于本项目的漫画主题商城项目，商城整体主题改为漫画风格，替换了所有原有的天猫素材和元素，整体色调从天猫红改成卡通黄，增加大量漫画类示例数据，方便二次扩展，有需要可以加群后联系群主，部分示例图如下：
++ **群主联系方式（备注：天猫商城）：**
++ <img src="mmqrcode1672065137273.png" alt="问题交流微信群" width="30%" height="30%"/>
++ **前台演示地址（服务器到期暂时停用）：<https://xianqu.fun/tmall/>**
++ **2022/4/21：我们基于本项目二次开发了一个二次元动漫主题的商城项目，商城整体主题改为二次元动漫风格，替换了所有原有的天猫素材和元素，整体色调从天猫红改成卡通黄，增加大量动漫主题素材，方便同学们用于答辩和毕设场景扩展开发，有需要可以微信联系群主，部分示例图如下：**
 + <img src="%E6%BC%AB%E7%94%BB%E4%B8%BB%E9%A2%98%E5%95%86%E5%9F%8E%E7%A4%BA%E4%BE%8Ba.png" alt="快看漫画社示例1" width="100%" height="100%"/>
 + <img src="%E6%BC%AB%E7%94%BB%E4%B8%BB%E9%A2%98%E5%95%86%E5%9F%8E%E7%A4%BA%E4%BE%8Bb.png" alt="快看漫画社示例2" width="100%" height="100%"/>
 + <img src="%E6%BC%AB%E7%94%BB%E4%B8%BB%E9%A2%98%E5%95%86%E5%9F%8E%E7%A4%BA%E4%BE%8Bc.png" alt="快看漫画社示例3" width="100%" height="100%"/>
@@ -77,6 +78,12 @@
 
 另本项目已使用当前较为流利的CICD方式，jenkins+k8s进行持续构建、部署，涉及文件:Dockerfile,K8sJenkinsFile及deploy.yaml
 
+详情可参考：或者点击[链接](https://mp.weixin.qq.com/s?__biz=MzI0NzI3ODcxOA==&mid=2650174707&idx=1&sn=4faf5d058891993dc838f3df0ec678d3&chksm=f1b0a9e2c6c720f41762c5371dbb26987e49aac2acc180e9ff773f1b29af9579f213a38c5bee#rd)
+
+```
+https://mp.weixin.qq.com/s?__biz=MzI0NzI3ODcxOA==&mid=2650174707&idx=1&sn=4faf5d058891993dc838f3df0ec678d3&chksm=f1b0a9e2c6c720f41762c5371dbb26987e49aac2acc180e9ff773f1b29af9579f213a38c5bee#rd
+```
+
 Dockerfile:大概作用是依据基础的jdk镜像，添加上自己本身的jar包，打成镜像包
 
 K8sJenkinsFile:大概作用是把生成jar包、部署jar包流程自动化
@@ -89,5 +96,8 @@ k8s部署的项目访问网址:
 + 后台地址：http://tmall.howlaisi.com:31253/tmall/admin
 
 具体情况可联系以下同学(加他时请备注"贤趣CICD"):
-+ ##### 贤趣CICD同学微信
-<img src="https://gitee.com/haoxr/image/raw/master/default/jialin.jpg" alt="CICD同学" width="128px" height="128px"/>
+
+```
+ggttxlss
+```
+
