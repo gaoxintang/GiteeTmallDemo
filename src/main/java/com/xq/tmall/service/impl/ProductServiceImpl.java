@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @Service("productService")
 public class ProductServiceImpl implements ProductService {
@@ -51,6 +52,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Integer getTotal(Product product,Byte[] product_isEnabled_array) {
         return productMapper.selectTotal(product,product_isEnabled_array);
+    }
+
+    @Override
+    public List<Map<String, Object>> getTotalByGroupCategory() {
+        return productMapper.selectTotalByGroupCategory();
     }
 
     @Override

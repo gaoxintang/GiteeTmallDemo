@@ -169,14 +169,14 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 if (data.success) {
-                    $(".msg").stop(true, true).animate({
+                    $(".msg").stop(true, true).css("display", "inline-block").animate({
                         opacity: 1
                     }, 550, function () {
                         $(".msg").animate({
                             opacity: 0
                         }, 1500, function () {
                             location.href = "/tmall/login";
-                        });
+                        }).css("display", "none");
                     });
                 } else {
                     $("#user_name").css("border", "1px solid red")

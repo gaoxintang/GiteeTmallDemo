@@ -224,4 +224,11 @@
             </if>
         </where>
     </select>
+
+    <select id="selectTotalByGroupCategory" resultType="map">
+        SELECT category_name name, count(0) value FROM product
+            LEFT JOIN category ON category.category_id = product.product_category_id
+        GROUP BY category_name
+        ORDER BY category_id
+    </select>
 </mapper>

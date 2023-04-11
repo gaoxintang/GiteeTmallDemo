@@ -21,4 +21,6 @@ public interface ProductOrderService {
     ProductOrder get(Integer productOrder_id);
     ProductOrder getByCode(String productOrder_code);
     Integer getTotal(ProductOrder productOrder,Byte[] productOrder_status_array);
+
+    Integer updateByCode(ProductOrder productOrder);
 }

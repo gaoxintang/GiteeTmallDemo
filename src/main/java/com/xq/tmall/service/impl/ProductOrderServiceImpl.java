@@ -64,4 +64,9 @@ public class ProductOrderServiceImpl implements ProductOrderService{
     public Integer getTotal(ProductOrder productOrder, Byte[] productOrder_status_array) {
         return productOrderMapper.selectTotal(productOrder,productOrder_status_array);
     }
+
+    @Override
+    public Integer updateByCode(ProductOrder productOrder) {
+        return productOrderMapper.updateByCode(productOrder);
+    }
 }

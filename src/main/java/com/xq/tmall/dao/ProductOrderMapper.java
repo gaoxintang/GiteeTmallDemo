@@ -21,4 +21,5 @@ public interface ProductOrderMapper {
     ProductOrder selectByCode(@Param("productOrder_code") String productOrder_code);
     Integer selectTotal(@Param("productOrder") ProductOrder productOrder, @Param("productOrder_status_array") Byte[] productOrder_status_array);
     List<OrderGroup> getTotalByDate(@Param("beginDate") Date beginDate, @Param("endDate") Date endDate);
+    Integer updateByCode(@Param("productOrder") ProductOrder productOrder);
 }

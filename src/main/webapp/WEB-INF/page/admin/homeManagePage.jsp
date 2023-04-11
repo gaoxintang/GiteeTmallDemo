@@ -4,6 +4,7 @@
 <head>
     <script>
         var myChart;
+        var myChart2;
         $(function () {
             $.getJSON('/tmall/res/js/basicTheme.json', function (themeJSON) {
                 echarts.registerTheme('basicTheme', themeJSON);
@@ -209,6 +210,58 @@
                 };
                 // 使用刚指定的配置项和数据显示图表。
                 myChart.setOption(option);
+                // 基于准备好的dom，初始化eCharts实例
+                myChart2 = echarts.init($("#chartDiv2")[0], "basicTheme");
+                // 指定图表的配置项和数据
+                var option = {
+                    title: {
+                        text: '商品分类统计',
+                        left: 'center'
+                    },
+                    tooltip: {
+                        trigger: 'item'
+                    },
+                    legend: {
+                        orient: 'vertical',
+                        left: 'left'
+                    },
+                    series: [
+                        {
+                            name: 'From',
+                            type: 'pie',
+                            radius: '40%',
+                            center: ["65%", "50%"],//饼状图位置
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'top',
+                                    fontSize : 13,
+                                    color : '#666',
+                                    alignTo: 'edge',
+                                    formatter: '{name|{b}}\n{value|{c} 件}',
+                                    minMargin: 5,
+                                    edgeDistance: 10,
+                                    lineHeight: 15,
+                                    rich: {
+                                        value: {
+                                            fontSize: 11,
+                                            color: '#999'
+                                        }
+                                    }
+                                }
+                            },
+                            data: [],
+                            areaStyle: {},
+                            itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    ]
+                };
+                // 使用刚指定的配置项和数据显示图表。
+                myChart2.setOption(option);
                 //异步加载数据
                 getChartData(null, null, JSON.parse('${requestScope.jsonObject}'));
             });
@@ -288,6 +341,12 @@
                                 data: data.orderUnpaidArray
                             }]
                         });
+                        myChart2.setOption({
+                            series: [{
+                                name: '商品统计',
+                                data: data.totalByGroupCategory
+                            }]
+                        });
                     }, beforeSend: function () {
                         $(".loader").css("display", "block");
                         $("#btn_chart_search").attr("disabled", true);
@@ -315,6 +374,12 @@
                     }, {
                         name: "等待买家付款",
                         data: jsonObject.orderUnpaidArray
+                    }]
+                });
+                myChart2.setOption({
+                    series: [{
+                        name: '商品统计',
+                        data: jsonObject.totalByGroupCategory
                     }]
                 });
             }
@@ -450,7 +515,15 @@
         }
 
         #chartDiv {
+            float: left;
             border: 1px solid #eee;
+            padding: 20px;
+        }
+
+        #chartDiv2 {
+            float: left;
+            border: 1px solid #eee;
+            border-left: none;
             padding: 20px;
         }
 
@@ -484,7 +557,10 @@
         <div class="chartTotalStyle" style="background-color: #ffdea4"></div>
     </li>
 </ul>
-<div id="chartDiv" style="width: 100%;height: 500px"></div>
+<div>
+    <div id="chartDiv" style="width: 60%;height: 580px"></div>
+    <div id="chartDiv2" style="width: 40%;height: 580px"></div>
+</div>
 <div class="loader"></div>
 </body>
 </html>

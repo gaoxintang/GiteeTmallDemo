@@ -119,11 +119,11 @@
                 return;
             }
             //判断大小
-            if (file.size > 512000) {
+            if (file.size > 3192000) {
                 $("#btn-ok").unbind("click").click(function () {
                     $("#modalDiv").modal("hide");
                 });
-                $(".modal-body").text("图片大小不能超过500K！");
+                $(".modal-body").text("图片大小不能超过3M！");
                 $('#modalDiv').modal();
                 return;
             }

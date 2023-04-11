@@ -25,7 +25,7 @@ $(function () {
         number++;
         $(".context_buymember").val(number);
     });
-    $(".amount_value-down").click(function () {
+    $(".amount_value_down").click(function () {
         var number = parseInt($(".context_buymember").val());
         if (number > 1) {
             number--;

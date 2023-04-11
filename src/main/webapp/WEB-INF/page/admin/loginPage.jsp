@@ -44,7 +44,7 @@
         </div>
     </div>
     <div id="div_foot">
-        <span>© 2022 XQ Team <a href="http://license.coscl.org.cn/MulanPSL2/" target="_blank">Mulan PSL v2</a></span>
+        <span>© 2023 XQ Team <a href="http://license.coscl.org.cn/MulanPSL2/" target="_blank">Mulan PSL v2</a></span>
         <span> ⋅ </span>
         <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">陕ICP备2022003873号</a>
     </div>

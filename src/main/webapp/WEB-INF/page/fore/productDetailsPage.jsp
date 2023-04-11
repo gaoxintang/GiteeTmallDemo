@@ -152,9 +152,9 @@
                 <input type="hidden" id="stock" value="1000">
                 <span class="amount-btn">
                     <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/up.png"
-                         class="amount_value_up">
+                         class="amount_value_up"/>
                     <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/down.png"
-                         class="amount_value-down">
+                         class="amount_value_down"/>
                 </span>
                 <span class="amount_unit">件</span>
                 <em>库存1000件</em>
@@ -196,12 +196,12 @@
                                 dataType: "json",
                                 success: function (data) {
                                     if (data.success) {
-                                        $(".msg").stop(true, true).animate({
+                                        $(".msg").stop(true, true).css("display", "inline-block").animate({
                                             opacity: 1
                                         }, 550, function () {
                                             $(".msg").animate({
                                                 opacity: 0
-                                            }, 1500);
+                                            }, 1500).css("display", "none");
                                         });
                                     } else {
                                         if (data.url != null) {

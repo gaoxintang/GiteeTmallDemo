@@ -70,9 +70,12 @@ $(function () {
     $(".banner_slider>li").hover(function () {
         index = parseInt($(this).attr("id").substring($(this).attr("id").indexOf("_") + 1));
         clearInterval(timer);
+        timer = undefined;
         getTimer();
     }, function () {
-        timer = setInterval(getTimer, 3000);
+        if(!timer) {
+            timer = setInterval(getTimer, 3000);
+        }
     });
 });
 

@@ -172,8 +172,8 @@ function uploadImage(fileDom) {
         return;
     }
     //判断大小
-    if (file.size > 512000) {
-        alert("图片大小不能超过500K！");
+    if (file.size > 3192000) {
+        alert("图片大小不能超过3M！");
         return;
     }
     //清空值

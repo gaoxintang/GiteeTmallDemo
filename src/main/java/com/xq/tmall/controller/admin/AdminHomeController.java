@@ -1,9 +1,7 @@
 package com.xq.tmall.controller.admin;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.sun.org.apache.xpath.internal.operations.Or;
 import com.xq.tmall.controller.BaseController;
 import com.xq.tmall.entity.Admin;
 import com.xq.tmall.entity.OrderGroup;
@@ -11,7 +9,6 @@ import com.xq.tmall.service.AdminService;
 import com.xq.tmall.service.ProductOrderService;
 import com.xq.tmall.service.ProductService;
 import com.xq.tmall.service.UserService;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -93,8 +90,6 @@ public class AdminHomeController extends BaseController {
         Integer orderTotal = productOrderService.getTotal(null, new Byte[]{3});
         logger.info("获取图表信息");
         map.put("jsonObject", getChartData(null, null,7));
-        logger.info("获取图表信息");
-        map.put("jsonObject", getChartData(null,null,7));
         map.put("productTotal", productTotal);
         map.put("userTotal", userTotal);
         map.put("orderTotal", orderTotal);
@@ -205,6 +200,9 @@ public class AdminHomeController extends BaseController {
             //将统计的订单总数存入总交易订单数统计数组
             orderTotalArray[i] = orderCount;
         }
+        //商品分类统计
+        logger.info("从数据库中获取统计的商品分类数据");
+        List<Map<String, Object>> totalByGroupCategory = productService.getTotalByGroupCategory();
         logger.info("返回结果集map");
         jsonObject.put("orderTotalArray", orderTotalArray);
         jsonObject.put("orderUnpaidArray", orderUnpaidArray);
@@ -212,6 +210,7 @@ public class AdminHomeController extends BaseController {
         jsonObject.put("orderUnconfirmedArray", orderUnconfirmedArray);
         jsonObject.put("orderSuccessArray", orderSuccessArray);
         jsonObject.put("dateStr",dateStr);
+        jsonObject.put("totalByGroupCategory", totalByGroupCategory);
         return jsonObject;
     }
 }
