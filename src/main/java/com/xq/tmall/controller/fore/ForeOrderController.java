@@ -1105,7 +1105,7 @@ public class ForeOrderController extends BaseController {
             if (orderItem.getProductOrderItem_product().getProduct_id().equals(product_id)) {
                 logger.info("找到已有的产品，进行数量追加");
                 int number = orderItem.getProductOrderItem_number();
-                number += 1;
+                number += product_number;
                 productOrderItem.setProductOrderItem_id(orderItem.getProductOrderItem_id());
                 productOrderItem.setProductOrderItem_number((short) number);
                 productOrderItem.setProductOrderItem_price(number * product.getProduct_sale_price());
