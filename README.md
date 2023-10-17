@@ -1,6 +1,6 @@
 # 迷你天猫商城
 
-+ **2023/10/17：我们正在计划对本项目进行全新升级，采用目前主流的前后端分离方式，技术栈采用目前最新的Springboot3+vue3+element plus，且支持容器化部署，欢迎大家对全新版本的功能提供意见，也请顺手点个star和关注！**
++ **2023/10/17：我们正在计划对本项目进行全新升级，采用目前主流的前后端分离方式，技术栈采用目前最新的Springboot3+vue3+element plus，且支持容器化部署，如果你对新项目的功能有好的意见，欢迎提交lssues，也请顺手点个star和关注！**
 + 前端：<https://gitee.com/project_team/my-tmall-vue>
 + 后端：<https://gitee.com/project_team/my-tmall>
 
