@@ -24,6 +24,10 @@
 3. 使用IDEA打开项目后，在maven面板刷新项目，下载依赖包。
 4. 配置数据库连接并启动SpringBootApplication即可。
 
+### 演示地址
++ 前台地址：http://tmall.howlaisi.com:31253/tmall
++ 后台地址：http://tmall.howlaisi.com:31253/tmall/admin
+
 ### 项目默认运行地址
 + 前台地址：<http://localhost:8080/tmall>
 + 后台地址：<http://localhost:8080/tmall/admin>
