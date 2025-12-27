@@ -102,8 +102,3 @@ k8s部署的项目访问网址:
 + 后台地址：http://tmall.howlaisi.com:31253/tmall/admin
 
 具体情况可联系以下同学(加他时请备注"贤趣CICD"):
-
-```
-ggttxlss
-```
-
